@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+        }
+        #first-div{
+            height: 100vh;
+            width: 100%;
+            background-image: url(https://cutewallpaper.org/21/friends-wallpaper-hd/Friends-Hd-Wallpapers-1080p-35+-Group-Wallpapers.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            opacity: 0.7;
+        }
+        #second-div{
+            height: 100vh;
+            width: 100%;
+            background-image: url(https://i.pinimg.com/originals/cc/01/e3/cc01e3244b4d54327d55068115d02f1d.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            text-align: center;
+            opacity: 0.7;
+        }
+        #third-div{
+            height: 100vh;
+            width: 100%;
+            background-image: url(https://cdn.dnaindia.com/sites/default/files/styles/full/public/2016/07/25/485370-chandler-and-joey-tumblr.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            text-align: center;
+            opacity: 0.7;
+        }
+        #fourth-div{
+            height: 100vh;
+            width: 100%;
+            background-image: url(https://images.hindustantimes.com/img/2021/05/27/550x309/E2XEP2XVUAIQcGY_1622088615243_1622088624305.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            text-align: center;
+            opacity: 0.7;
+        }
+        @keyframes moving-button {
+            0%{
+                position: relative;
+                left: 0;
+            }
+            50%{
+                position: relative;
+                left: 100%;
+            }
+            100%{
+                position: relative;
+                left: 0;
+            }
+        }
+        .buttons{
+            top: 250px;
+            padding: 50px;
+            background-color: #181717;
+            color: white;
+            width: 500px;
+            border-radius: 20px;
+            border: none;
+            font-size: 60px;
+            animation: moving-button 10s infinite;
+        }
+        .buttons:hover{
+            transition: all 0.5s;
+            transform: scale(1.1);
+        }
+        .text{
+            text-align: center;
+            font-family: "Poppins";
+            padding: 100px 100px;
+            background-color: #03002D;
+            color: white;
+        }
+        #heading{
+            text-align: center;
+            font-family: "Poppins";
+            font-size: 70px;
+            position: fixed;
+            top: 500px;
+        }
+        @media(max-width:400px) {
+            .text{
+                padding: 20px 40px;
+            }
+            #first-div{
+                width: 100%;
+                background-size: cover;
+            }
+            .buttons{
+                padding: 10px;
+                width: 100px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id=heading>Parallax </h1>
+    <div style="overflow: hidden;">
+        <div id="first-div">
+            <button class="buttons">Hello Emma</button>
+        </div>
+        <div class="text">
+            <p>
+                The child is born, but Ross and Rachel don't have a name yet. When the doctor is ready to list her as Baby Girl Greene, 
+                Rachel decides her daughter's surname will be Geller-Greene, leading to her kissing Ross. Soon the gang visits Rachel and the baby, 
+                and Ross introduces their daughter as Isabella only for Rachel to start crying as she claims Isabella is "not her name" although she 
+                can't explain why. Ross suggests their back-up of Delilah, but Rachel can't accept that either. When it's mentioned that Monica has 
+                already picked the names of her future children, Rachel asks what the girl name would be promising she won't steal it. 
+                However, when Monica tells her that she'd picked the name "Emma", Rachel clearly really likes it but tries to hide it. 
+                Monica agrees to allow Rachel to use it, telling her that even though she loves the name,
+                she loves Rachel more (and also reasoning that their child is screwed with the surname 'Bing' anyway),
+                and with that Ross and Rachel's daughter is Emma Geller-Greene. Ross then hugs his sister. 
+            </p>
+        </div>
+        <div id="second-div">
+            <button class="buttons">Mondler</button>
+        </div>
+        <div class="text">
+            <p>
+                After living together for a year, Chandler decides he's ready to propose to Monica, purchasing a ring with Phoebe's help, and he takes her out to her favorite restaurant for a romantic evening. However, the evening doesn't go as planned; Richard shows up and is seated at the next table. When they get home, still not engaged, but first Phoebe and then Rachel asks to see Monica's hand, Chandler is upset believing his surprise has been ruined. Phoebe and Joey convince him it's not, that all he needs to do is take a couple of days convincing her that he's nowhere near ready to get married, then it will still be a surprise when he actually does propose. His plan goes off a little too well, and things get even more out of hand when Richard shows up and tells Monica he still loves her and wants to marry her. Monica is very upset about how unfair it is, saying that "fair" would have been if Richard had wanted to marry her back when she was still in love with him, or if Chandler wanted to marry her now. Meanwhile, Chandler frantically searches for her, worried that he's gone too far in pretending he didn't want to get married and that he might have ruined everything. When he returns to their apartment that evening Joey had already explained everything to Monica, and she was there waiting for Chandler with hundreds of lit candles all over the room. Monica gets down on one knee and tries to propose, but she starts crying so much she can't finish it, so Chandler gets down on one knee as well, telling her that she makes him happier than he ever imagined he could be. Telling Monica that he will spend the rest of their lives trying to make her feel that happy, he asks Monica to marry him, and Monica says 'yes'.
+            </p>
+        </div>
+        <div id="third-div">
+            <button class="buttons">Chandler and Joey</button>
+        </div>
+        <div class="text">
+            <p>
+                Together they were like a well bonded close-knit family, but even on their own, each character had a unique and special relationship to one another, and in the end all came together as one big Central Perk gang. One of the best duos on the show was the ‘bromance’ between Joey and Chandler. These two characters were inseparable throughout all 10 seasons and their comical brotherly love kept audiences roaring with laughter. It was hard to narrow down, but here are some of the best moments between Chandler and Joey. 
+            </p>
+        </div>
+        <div id="fourth-div">
+            <button class="buttons">Reunion</button>
+        </div>
+        <div class="text">
+            <p>
+                After months (or, at this point, years) of rumors and anticipation, the Friends reunion of our dreams is now a reality. The cast has gathered for a special on HBO's streaming service, HBO Max, following the iconic sitcom's 25th anniversary. And while there were some bumps in the road to production with the world on pause due to the pandemic, the event we've been waiting for is finally here. Ahead, everything we know about the project.
+
+IT ARRIVES MAY 27.
+It's official! The Friends reunion, called "The One Where They Get Back Together," is now streaming on HBO Max as of Thursday, May 27. Viewers will need a subscription to the platform to watch.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

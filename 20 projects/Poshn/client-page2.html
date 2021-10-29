@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>client page</title>
+    <style>
+        body{
+            padding: 0 100px;
+        }
+
+        #product-image{
+            width:450px;
+            transform: translateX(80px);
+        }
+        .center{
+            text-align: center;
+            line-height: 22px;
+            font-size: 16px;
+            font-family: "Poppins",sans-serif;
+            color:#8b8b99;
+        }
+        .left{
+            text-align: left;
+            line-height: 30px;
+            font-size: 16px;
+            font-family: "Poppins",sans-serif;
+            color:#8b8b99;
+        }
+        #icons{
+            display:flex;
+            justify-content: center;
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        #icons div{
+            width:100px;
+            height:100px;
+            padding: 20px;
+            margin: 0 10px;
+        }
+        #icons img{
+            width:80px;
+            border: 5px solid black;
+            border-radius: 50%;
+            height:80px;
+            padding:20px;
+        }
+        .image-text{
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 700;
+            text-align: center;
+            padding-top: 10px;
+        }
+        #container-2,#container-3{
+            display: flex;
+            justify-content: center;
+            margin: 0 100px;
+            padding: 50px 100px;
+        }
+        #container-2 div{
+            padding: 10px;
+        }
+        #icons-2{
+            display:flex;
+            justify-content: center;
+            padding-bottom: 100px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        .desc{
+            font-size: 14px;
+            line-height: 22px;
+            color: #8b8b99;
+            font-weight: 400;
+            font-family: sans-serif;
+            text-align: center;
+            padding: 0 10px;
+        }
+        #icons-2 div{
+            width: 200px;
+        }
+        .mobile{
+            width:400px;
+            height:350px;
+        }
+        #mobile-1{
+            width: 500px;
+        }
+        #container-1 p{
+            display:flex;
+            justify-content:center;
+            padding:0 150px;
+        }
+        #container-1 h2{
+            display:flex;
+            justify-content:center;
+        }
+        @media screen and (max-width:480px) {
+            body{
+                padding:0px;
+            }
+            #icons{
+                width: 400px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+            }
+            #icons div{
+                display: inline-flex;
+            }
+            .image-text{
+                padding-left: 70px;
+            }
+            #mobile-1{
+                width:390px;
+            }
+            #container-1{
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+            #container-2{
+                display: flex;
+                flex-direction: column;
+                width: 400px;
+                margin: 0;
+                padding: 0;
+            }
+            #container-3{
+                display: flex;
+                flex-direction: column-reverse;
+                width: 400px;
+                margin: 0;
+                padding: 0;
+            }
+            .mobile{
+                width:390px;
+            }
+            #container-2 div{
+                padding: 0;
+            }
+            #icons-2{
+                flex-direction: column;
+            }
+            #container-1 p{
+                padding: 10px;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+        
+    <div id="icons">
+        <div>
+            <img src="https://img-premium.flaticon.com/png/512/1554/1554414.png?token=exp=1621317843~hmac=8df6772c088a39358de3c200798bd7de">
+            <p  class="image-text">Cash On Delivery</p>
+        </div>
+        <div>
+            <img src="https://img-premium.flaticon.com/png/512/4457/4457358.png?token=exp=1621318167~hmac=7f5855e5ea2aaa626ed6f94d4ff53323">
+            <p  class="image-text">Free Delivery</p>
+        </div>
+        <div>
+            <img src="https://img-premium.flaticon.com/png/512/4005/4005733.png?token=exp=1621318238~hmac=10be2e3b1df437ca545185032192162a">
+            <p  class="image-text">Made With Natural Ingredients</p>
+        </div>
+        <div>
+            <img src="https://img-premium.flaticon.com/png/512/3778/3778830.png?token=exp=1621318278~hmac=07e418fd0abbd4b541ee563f0f3ea827">
+            <p  class="image-text">No Added Sugar</p>
+        </div>
+    </div>
+    <div id="container-1" style="text-align: center;">
+        <h2 style="font-size: 24; font-weight: 600;color:#27272f;line-height: 31px;">Natural Relaxation Juice</h2>
+        <img id = "mobile-1" src="https://www.myposhn.com/wp-content/uploads/2019/02/Natural-Relaxation-Juice.jpg">
+        <h2 style="font-size: 24; font-weight: 600;color:#27272f;line-height: 31px;">Relax = Cherries and Berries + Chamomile</h2>
+        <p style="font-size: 16px;font-family: sans-serif;line-height: 22px;color:#8b8b99;">Relax is made up of anti-oxidant rich berries and cherries which are high in naturally occurring melatonin. We’ve combined that with chamomile petals to give you a drink that will calm your mind, relax your senses, and ensure you get a good night’s sleep!</p>
+    </div>
+    <div id="container-2">
+        <div>
+            <img class = "mobile" src="https://www.myposhn.com/wp-content/uploads/2019/02/Natural-Dose-of-Relaxation.jpg">
+        </div>
+        <div>
+            <h2 style="font-size: 24; font-weight: 600;color:#27272f;line-height: 31px;">
+                Natural Dose of Relaxation
+            </h2>
+            <p style="font-size: 16px;font-family:sans-serif;color:#8b8b99;line-height:22px">
+                Want to unwind after a long day? Tired of those sleepless nights? Or just need to calm your nerves? Then Relax is the drink for you!
+            
+                <ul style="font-size: 16px;font-family:sans-serif;color:#8b8b99;line-height:22px">
+                    <li>High on Taste</li>
+                    <li>Natural High-Quality Ingredients</li>
+                    <li>Healthy Alternative</li>
+                    <li>Added Vitamins and Minerals</li>
+                    <li>Low on Calories</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+    <div id="container-3">
+        <div>
+            <h2 style="font-size: 24; font-weight: 600;color:#27272f;line-height: 31px;">
+                Ready To Drink, Anytime Anywhere
+            </h2>
+            <p style="font-size: 16px;font-family:sans-serif;color:#8b8b99;line-height:22px">
+                Poshn is also completely dairy and gluten free, and extremely low in calories. So when we say Poshn is for everyone, we mean it!
+            </p>
+        </div>
+        <div>
+            <img class = "mobile" src="https://www.myposhn.com/wp-content/uploads/2019/02/Ready-To-Drink-Anytime-Anywhere.jpg">
+        </div>
+    </div>
+    <div style="text-align: center;">
+        <h2 style="font-size: 24; font-weight: 600;color:#27272f;line-height: 31px;">
+            Benefit of Having Relax
+        </h2>
+        <div id="icons-2">
+            <div>
+                <img src="https://www.myposhn.com/wp-content/uploads/2019/02/Natural-Relaxation.jpg">
+                <p class="desc">Made with antioxidant fruits and chamomile we give a drink that will calm your mind.</p>
+            </div>        
+            <div>
+                <img src="https://www.myposhn.com/wp-content/uploads/2019/02/builds-immunity.jpg">
+                <p class="desc">Poshn is high in Vitamin C we also have the added vitamin B complex that helps you with all the necessary Vitamins.</p>
+            </div>
+            <div>
+                <img src="https://www.myposhn.com/wp-content/uploads/2019/02/only-50cal.jpg">
+                <p class="desc">A perfect replacement to your unhealthy aerated drinks with only 50 calories.</p>
+            </div>
+            <div>
+                <img src="https://www.myposhn.com/wp-content/uploads/2019/02/good-for-skin.jpg">
+                <p class="desc">High on melatonin that is good for your skin</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

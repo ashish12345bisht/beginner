@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <title>Games</title>
+    <style>
+        body{
+            background-color: pink;
+        }
+        .flex-box-container-1, .flex-box-container-2, .flex-box-rps
+        {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .flex-box-container-1 div 
+        {
+            display: flex;
+            padding: 10px;
+        }
+        .container-1, .container-2, .container-3
+        {
+            
+            background-color: pink;
+            margin: 0 auto;
+            width: 75%;
+            text-align: center;
+            min-height: 400px;
+        }
+
+        .flex-box-container-2 img
+        {
+            display: flex;
+            width: 30%;
+            box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.7); 
+            margin: 10px;
+        }
+        .flex-box-rps img:hover
+        {
+            box-shadow: 0px 10px 50px rgba(37, 50, 233, 1);
+        }
+        #catButtons{
+            display: flex;
+            justify-content: space-around;
+        }
+        #choices img{
+            width: 200px;
+            height: 200px;
+        }
+        #megabox{
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="megabox">
+        <div class="container-1">
+            <h2>Game 1: Your age in days.</h2>
+            <div class="flex-box-container-1">
+                <div>
+                    <button class="btn btn-primary" onclick="ageInDays()">Click me</button>
+                </div>
+                <div>
+                    <button class="btn btn-danger" onclick="reset()">Reset</button>
+                </div>
+            </div>
+            <div class="flex-box-container-1">
+                <div id="flex-box-result">
+
+                </div>
+
+            </div>
+        </div>
+        <div class="container-2">
+            <h2>Game 2: Cat Generator</h2>
+            <div id="catButtons">
+                <button class="btn btn-success" id="cat-generator" onclick="generateCat()">Generate</button>
+                <button id="cat-remover" class="btn btn-danger" onclick="catRemover()">Clear</button>
+            </div>
+            <div class="flex-box-container-2" id = "flex-cat-gen">
+                
+            </div>
+        </div>
+
+        <div class="container-3">
+            <h2>Game 3: Rocks, Paper, Scissors</h2>
+            <div class="flex-box-rps" id="flex-box-rps-div">
+                <input type="radio" name="sps" id="stone">
+                <label for="stone"><img id="rock" width=150px height= 150px src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQKSnuBW6cLFqVi58lzaaqnQZlPHQx2pw7P5w&usqp=CAU"></label>
+                <input type="radio" name="sps" id="paper">
+                <label for="paper"><img id="paper" width=150px height= 150px src="https://image.shutterstock.com/image-vector/two-blank-paper-cartoon-vector-260nw-326072252.jpg"></label>
+                <input type="radio" name="sps" id="scissor">
+                <label for="scissor"><img id="scissors" width=150px height= 150px src="https://library.kissclipart.com/20180829/paq/kissclipart-scissors-cartoon-clipart-clip-art-2ff2a3ae9495c985.png"></label>
+            </div>
+            <button onclick="sps()" class=>PLAY</button>
+            <div id="choices">
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        function ageInDays(){
+            var birthyear=prompt('enter your birth year!');
+            var ageindays=(2020-birthyear)*365;
+            var h1=document.createElement('h1');
+            var textAnswer= document.createTextNode('you are '+ ageindays+' days old');
+            h1.setAttribute('id','ageindays');
+            h1.appendChild(textAnswer);
+            document.getElementById('flex-box-result').appendChild(h1);
+        }
+
+        function reset(){
+            document.getElementById('ageindays').remove();
+        }
+
+        function generateCat()
+        {
+            var image= document.createElement('img');
+            var div=document.getElementById('flex-cat-gen');
+            image.src="https://images.theconversation.com/files/350865/original/file-20200803-24-50u91u.jpg?ixlib=rb-1.1.0&rect=37%2C29%2C4955%2C3293&q=45&auto=format&w=926&fit=clip";
+            div.appendChild(image);
+        }
+        function catRemover()
+        {
+            document.getElementById("flex-cat-gen").innerHTML="";
+        }
+        
+        function sps(){
+            document.getElementById("choices").innerHTML="";
+            var userChoice=0;
+            if(document.getElementById("stone").checked==true)
+            {
+                userChoice=1;
+            }
+            else if(document.getElementById("paper").checked==true)
+            {
+                userChoice=2;
+            }
+            else if(document.getElementById("scissor").checked==true)
+            {
+                userChoice=3;
+            }
+            var compChoice=Math.floor(Math.random()*3);
+            compChoice+=1;
+            if(userChoice==0)
+            {
+                alert("Nothing Selected!!");
+                return;
+            }
+            var message="";
+            if((userChoice==1 && compChoice==2) || (userChoice==2 && compChoice==3) || (userChoice==3 && compChoice==1))
+            {
+                message=message+"You LOOSE!! Left one is your choice and the right one is the computer's";
+                alert(message);
+            }
+            if((userChoice==2 && compChoice==1) || (userChoice==3 && compChoice==2) || (userChoice==1 && compChoice==3))
+            {
+                message=message+"You WIN!! Left one is your choice and the right one is the computer's";
+                alert(message);
+            }
+            if(userChoice==compChoice)
+            {
+                alert("its a tie!! Left one is your choice and the right one is the computer's ");
+            }
+            console.log(userChoice);
+            console.log(compChoice);
+            var image= document.createElement('img');
+            var div=document.getElementById('choices');
+            if(userChoice==1)
+            {
+                image.src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQKSnuBW6cLFqVi58lzaaqnQZlPHQx2pw7P5w&usqp=CAU";
+            }
+            else if(userChoice==2)
+            {
+                image.src="https://image.shutterstock.com/image-vector/two-blank-paper-cartoon-vector-260nw-326072252.jpg";
+            }
+            else if(userChoice==3)
+            {
+                image.src="https://library.kissclipart.com/20180829/paq/kissclipart-scissors-cartoon-clipart-clip-art-2ff2a3ae9495c985.png";
+            }
+            div.appendChild(image);
+            var image1= document.createElement('img');
+            if(compChoice==1)
+            {
+                image1.src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQKSnuBW6cLFqVi58lzaaqnQZlPHQx2pw7P5w&usqp=CAU";
+            }
+            else if(compChoice==2)
+            {
+                image1.src="https://image.shutterstock.com/image-vector/two-blank-paper-cartoon-vector-260nw-326072252.jpg";
+            }
+            else if(compChoice==3)
+            {
+                image1.src="https://library.kissclipart.com/20180829/paq/kissclipart-scissors-cartoon-clipart-clip-art-2ff2a3ae9495c985.png";
+            }
+            div.appendChild(image1);
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #container-1{
+            background-image: url("https://static.pexels.com/photos/248515/pexels-photo-248515.png");
+            height: 400px;
+            text-align: center;
+            padding: 100px 350px 50px 350px;
+            background-size: cover;
+            opacity: 0.95;
+        }
+        #heading-1{
+            font-size: 35px;
+            line-height: 53px;
+            color: white;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #paragraph-1{
+            font-size: 18px;
+            line-height: 26px;
+            color: white;
+            font-weight: 400;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #button-1{
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: 400;
+            background-color: #333333;
+            color: white;
+            border: 2px solid #333333;
+            padding: 20px 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #button-1:hover{
+            color:#333333;
+            background-color: white;
+        }
+        .text-container{
+            text-align: center;
+            padding: 30px 300px;
+        }
+        .heading-2{
+            color: #333333;
+            font-size: 26px;
+            line-height: 40px;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .inner-container-1{
+            display: flex;
+            padding: 25px;
+        }
+        .inner-text{
+            font-size: 18px;
+            line-height: 26px;
+            color: #333333;
+            font-weight: 400;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #container-3{
+            display: flex;
+            padding: 50px 300px;
+            background-color: #333333;
+        }
+        .heading-3{
+            font-size: 21px;
+            line-height: 31px;
+            color: #333333;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .card{
+            width: 300px;
+            padding: 50px 10px;
+            text-align: center;
+            background-color: white;
+        }
+        .card-container img{
+            width:320px;
+            height: 200px;
+        }
+        .card-container
+        {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            margin: 10px;
+        }
+        #container-4{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            height: 300px;
+        }
+        #inner-container-2{
+            background-color: #2690D4;
+            text-align: center;
+            color: white;
+            padding: 50px 100px;
+        }
+        #inner-container-3{
+            background-color: #333333;
+            text-align: center;
+            color: white;
+            padding: 50px 100px;
+        }
+        .inner-heading-2{
+            font-size: 26px;
+            line-height: 40px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+        }
+        .inner-paragraph-2{
+            font-size: 18px;
+            line-height: 26px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+        }
+        #container-5{
+            background-color: black;
+            display: flex;
+            justify-content: space-around;
+            color: white;
+            font-size: 18px;
+            line-height: 26px;
+            font-weight: 400;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #link{
+            color: #2690d4;
+        }
+        #link:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        #main-heading{
+            text-align: center;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        @media(max-width:400px) {
+            #container-3{
+                padding: 10px;
+                flex-direction: column;
+            }
+            #container-1{
+                padding: 50px 10px;
+                height: 400px;
+            }
+            .text-container{
+                padding: 10px;
+            }
+            .inner-container-1{
+                flex-direction: column;
+                text-align: justify;
+            }
+            #container-4{
+                display: flex;
+                height: auto;
+                flex-direction: column;
+            }
+            #inner-container-2{
+                padding: 50px 10px;
+            }
+            #inner-container-3{
+                padding: 50px 10px;
+            }
+            #container-5{
+                justify-content: space-between;
+                line-height: 5px;
+                padding: 5px 10px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-heading">Demo Landing Page</h1>
+    <div id="container-1">
+        <h1 id="heading-1">Welcome to Acme Web Solutions</h1>
+        <p id="paragraph-1">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci eum error earum soluta voluptatum nisi laboriosam eos saepe asperiores dolorum.
+        </p>
+        <button id="button-1">Read More</button>
+    </div>
+    <div class="text-container">
+        <div>
+            <h1 class="heading-2">Web & Application Development</h1>
+        </div>
+        <div class="inner-container-1">
+            <div class="inner-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sint eligendi possimus? Unde officiis magnam laborum ipsa distinctio odio, vero dolor
+            </div>
+            <div class="inner-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sint eligendi possimus? Unde officiis magnam laborum ipsa distinctio odio, vero dolor
+            </div>
+        </div>
+    </div>
+    <div id="container-3">
+        <div class="card-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsWXhNMQj2JX6k_nSKmfk34tQO8yzfkgoQEA&usqp=CAU">
+            <div class="card">
+                <h3 class="heading-3">Web Development</h3>
+                <p class="inner-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sint eligendi possimus? Unde officiis magnam laborum ipsa distinctio odio, vero dolor
+                </p>
+            </div>
+        </div>
+        <div class="card-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnxh3x3TUfGVllawUGhNfIt__4N6xvtncU6g&usqp=CAU">
+            <div class="card">
+                <h3 class="heading-3">Mobile Applications</h3>
+                <p class="inner-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sint eligendi possimus? Unde officiis magnam laborum ipsa distinctio odio, vero dolor
+                </p>
+            </div>
+        </div>
+        <div class="card-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnfsc3emLHrDORXqWTsCB2Yc9wgP3IPVksrw&usqp=CAU">
+            <div class="card">
+                <h3 class="heading-3">Tech Marketing</h3>
+                <p class="inner-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sint eligendi possimus? Unde officiis magnam laborum ipsa distinctio odio, vero dolor
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="text-container">
+        <h2 class="heading-2">We handle all of your digital needs</h2>
+        <p class="inner-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sint eligendi possimus? Unde officiis magnam laborum ipsa distinctio odio, vero dolor</p>
+    </div>
+    <div id="container-4">
+        <div id="inner-container-2">
+            <h2 class=inner-heading-2>Contact Us</h2>
+            <p class="inner-paragraph-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sint eligendi possimus? Unde officiis magnam laborum ipsa distinctio odio, vero dolor</p>
+        </div>
+        <div id="inner-container-3">
+            <h2 class=inner-heading-2>About Our Company</h2>
+            <p class="inner-paragraph-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sint eligendi possimus? Unde officiis magnam laborum ipsa distinctio odio, vero dolor</p>
+        </div>
+    </div>
+    <div id="container-5">
+        <p>Acme Web Solutions</p>
+        <p>Project by <a id="link">Ashish Bisht</a></p>
+    </div>
+</body>
+</html>

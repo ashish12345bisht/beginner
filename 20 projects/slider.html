@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliders</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .slider{
+            min-height: 500px;
+            background-color: black;
+        }
+        .slides{
+            min-height: 500px;
+            position: absolute;
+            display: none;
+        }
+        .slides img{
+            width: 100vw;
+            height: 500px;
+            object-fit: cover;
+        }
+        .show{
+            display:block;
+            overflow: hidden;
+            animation: sliding 3s;
+            animation-fill-mode: forwards;
+            transition: all 0.5s;
+        }
+        
+        @keyframes sliding {
+            0%{
+                left: -200vw;opacity: 0;
+            }
+            100%{
+                left: 0%;opacity: 1;
+            }
+        }
+        .btn{
+            position:absolute;
+            top: 520px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides show">
+            <img src="https://ik.imagekit.io/cooldunlin185005/left_iXEMroBXc.jpg?updatedAt=1631605317616">
+        </div>
+        <div class="slides">
+            <img src="https://ik.imagekit.io/cooldunlin185005/right_Fb1Q7GTdgVi.jpg?updatedAt=1631605317520">
+        </div>
+        <div class="slides">
+            <img src="https://ik.imagekit.io/cooldunlin185005/starry-night-sky_KdWGKBL7DJ.jpg?updatedAt=1631271657230">
+        </div>
+        <div class="slides">
+            <img src="https://ik.imagekit.io/cooldunlin185005/black1_6WLWIejAP.jpg?updatedAt=1631251645988">
+        </div>
+    </div>
+    <div class="btn">
+        <button class="prev">PREV</button>
+        <button class="next">NEXT</button>
+    </div>
+</body>
+<script>
+    const slides=document.querySelectorAll(".slides");
+    const slider=document.querySelector(".slider");
+    const next=document.querySelector(".next");
+    const prev=document.querySelector(".prev");
+    next.addEventListener('click', nextClick);
+    prev.addEventListener('click', prevClick);
+    var slideNumber=1;
+    function nextClick()
+    {
+        slides.forEach(slide => {
+            slide.classList.remove("show");
+        });
+        slideNumber++;
+        if(slideNumber==slides.length){
+            slideNumber=0;
+        }
+        slides[slideNumber].classList.add("show");
+    }
+    function prevClick()
+    {
+        slides.forEach(slide => {
+            slide.classList.remove("show");
+        });
+        slideNumber--;
+        if(slideNumber==-1){
+            slideNumber=2;
+        }
+        slides[slideNumber].classList.add("show");
+    }
+    setTimeout(function(){
+        setInterval(function(){
+        slides.forEach(slide => {
+            slide.classList.remove("show");
+        });
+        slideNumber++;
+        if(slideNumber==slides.length){
+            slideNumber=0;
+        }
+        slides[slideNumber].classList.add("show");
+        },5000);
+    },2000);
+    
+    console.log(slides);
+</script>
+</html>

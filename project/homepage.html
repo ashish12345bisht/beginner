@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            background-color: black;
+        }
+        header img{
+            width:70px;
+        }
+        header{
+            display: flex;
+            justify-content: space-around;
+            border: 2px solid black;
+            border-radius: 50px;
+            padding: 10px 0px;
+            background-color: white;
+            z-index: 1;
+        }
+        #threeBarList{
+            color: white;
+            background-color: black;
+            height: 650px;
+            font-size: 25px;
+            line-height: 40px;
+            font-family: poppins;
+            border: 2px solid black;
+            border-radius: 50px;
+            padding: 10px 50px;
+            z-index: 0;
+            cursor: pointer;
+            overflow: hidden;
+            display: none;
+        }
+        
+        .lists:hover{
+            transform: scale(1.05) translateX(50px);
+            transition: all 0.5s;
+        }
+        #back{
+            position: relative;
+            width: 120px;
+            left: 1200px;
+        }
+        #back-img{
+            width: 50px;
+        }
+        .active-tab{
+            width: 50px;
+            border: 5px double black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .slider{
+            position: relative;
+            background: black;
+            width: 100%;
+            min-height: 650px;
+            margin: 0;
+            overflow: hidden;
+            margin-bottom: 100px;
+            border-radius: 25px;
+        }
+
+        .slider .slide{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            clip-path: circle(0% at 0 50%);
+        }
+
+        .slider .slide.active{
+            clip-path: circle(150% at 0 50%);
+            transition: 2s;
+        }
+
+        .slider .slide img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slider .slide .info{
+            position: absolute;
+            color: #ffffff;
+            width: 90%;
+            text-align: center;
+            font-family: "Poppins";
+            margin-top: 150px;
+            margin-left: 50px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+        }
+
+
+        .navigation{
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .slider:hover .navigation{
+            opacity: 1;
+        }
+
+        .prev-btn, .next-btn{
+            z-index: 999;
+            font-size: 2em;
+            color: #222;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .prev-btn{
+            border-radius: 50%;
+            width: 37px;
+            text-align: center;
+        }
+        .next-btn{
+            border-radius: 50%;
+            width: 37px;
+            text-align: center;
+        }
+        h2{
+            font-size: 43px;
+            line-height: 50px;
+            font-weight: 400;
+        }
+        .lists a{
+            color: white;
+            text-decoration: none;
+        }
+        .para{
+            font-size: 21px;
+            line-height: 29px;
+            font-weight: 400;
+        }
+        .navigation-visibility{
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navigation-visibility .slide-icon{
+            z-index: 999;
+            background: rgba(255, 255, 255, 0.5);
+            width: 20px;
+            height: 10px;
+            transform: translateY(-50px);
+            margin: 0 6px;
+            border-radius: 2px;
+            box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+        }
+        .navigation-visibility .slide-icon .active{
+            background: black;
+        }
+        #clientWork a{
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: poppins;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img class="images active-tab"src="https://ik.imagekit.io/cooldunlin185005/one__DWG7zbY2.png?updatedAt=1631201356917">
+        <img class="images" src="https://ik.imagekit.io/cooldunlin185005/two_A2XFPmo58.png?updatedAt=1631201359378">
+        <img class="images" src="https://ik.imagekit.io/cooldunlin185005/three_Klx7YQAfq7.png?updatedAt=1631201358556">
+        <img class="images" src="https://ik.imagekit.io/cooldunlin185005/four_WAclCcKxVH.png?updatedAt=1631201356950">
+        <img class="images" src="https://ik.imagekit.io/cooldunlin185005/five_nyC_ueg77.png?updatedAt=1631201356724">
+        <img class="images" src="https://ik.imagekit.io/cooldunlin185005/six_ogKYXU4jI.png?updatedAt=1631201357762">
+        <button id="threeBarOption"><img src="https://ik.imagekit.io/cooldunlin185005/3bar_aFrZ1wWF6.png?updatedAt=1631201998434"></button>
+    </header>
+    <section>
+        <div id="threeBarList">
+            <ol>
+                <li class="lists"><a target="blank" href="https://ncwm9puosvlaxmwijqud2g-on.drv.tw/www.allpages.com/games.html">I know you wanna play games!!</a></li>
+                <li class="lists"><a target="blank" href="https://ncwm9puosvlaxmwijqud2g-on.drv.tw/www.allpages.com/clock.html">Can you tell me what time it is?</a></li>
+                <li class="lists"><a target="blank" href="https://ncwm9puosvlaxmwijqud2g-on.drv.tw/www.allpages.com/covid-test.html">Excuse me Sir!! You need to take COVID-TEST</a></li>
+                <li class="lists"><a target="blank" href="https://ncwm9puosvlaxmwijqud2g-on.drv.tw/www.allpages.com/mystuff.html">Know Me better</a></li>
+                <li class="lists"><a target="blank" >Client Work</a></li>
+                <div id="clientWork">
+                    <ul>
+                        <li><a target="blank" href="https://ncwm9puosvlaxmwijqud2g-on.drv.tw/www.allpages.com/client-aboutUs.html">page1</a></li>
+                        <li><a target="blank" href="https://ncwm9puosvlaxmwijqud2g-on.drv.tw/www.allpages.com/client-FAQ.html">page2</a></li>
+                        <li><a target="blank" href="https://ncwm9puosvlaxmwijqud2g-on.drv.tw/www.allpages.com/client-page2.html">page3</a></li>
+                    </ul>
+                </div>
+                <li class="lists"><a>When I got bored..</a></li>
+                <div id="clientWork">
+                    <ul>
+                        <li><a target="blank" href="https://ncwm9puosvlaxmwijqud2g-on.drv.tw/www.allpages.com/friends.html">FRIENDS</a></li>
+                        <li><a target="blank" href="https://ncwm9puosvlaxmwijqud2g-on.drv.tw/www.allpages.com/google-template.html">Fake Google</a></li>
+                        <li><a target="blank" href="https://ncwm9puosvlaxmwijqud2g-on.drv.tw/www.allpages.com/landing-page.html">Demo Landing Page</a></li>
+                        <li><a target="blank" href="https://ncwm9puosvlaxmwijqud2g-on.drv.tw/www.allpages.com/tribute.html">A tribute</a></li>
+                    </ul>
+                </div>
+            </ol>
+            <button id="back"><img id="back-img" src="https://ik.imagekit.io/cooldunlin185005/back_yzy4sahVE.png?updatedAt=1631206744850"></button>
+        </div>
+        <div class="slider">
+            <div class="slide active">                
+                <img src="https://ik.imagekit.io/cooldunlin185005/black1_6WLWIejAP.jpg?updatedAt=1631251645988" alt="">
+                <div class="info">
+                <h2>Greetings</h2>
+                <p class="para">Hi, there!! My name is Ashish Bisht. Nice to meet you. Hope this page is still working fine when you are viewing it. Actually if you are viewing it it may be working just fine.. hehehehe. Its just a glance of what all I have done in last one year.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://ik.imagekit.io/cooldunlin185005/black1_6WLWIejAP.jpg?updatedAt=1631251645988" alt="">
+                <div class="info">
+                <h2>Please don't get bored!!</h2>
+                <p class="para">If you straight away want to dive into the projects just click on the 3 bar button the top right. It will show you all the links and take you to those pages.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://ik.imagekit.io/cooldunlin185005/black1_6WLWIejAP.jpg?updatedAt=1631251645988" alt="">
+                <div class="info">
+                <h2>Electrical Engineer who likes to code</h2>
+                <p class="para">Basically I am an electrical engineer who likes to code. I have been coding since I was in 9th standard. Last year during lockdown period I felt that I may need to decide what I want to do in future, So that's when I made up my mind that I am either gonna be a software or web developer.</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://ik.imagekit.io/cooldunlin185005/black1_6WLWIejAP.jpg?updatedAt=1631251645988" alt="">
+                <div class="info">
+                <h2>Skills</h2>
+                <p class="para">I (re)started my coding journey with python. It was the easiest of the languages and made problem solving very easy. Then i shifted my focus towards web development. I did a lot of courses on Udemy and GeeksforGeeks of javascript, HTML, CSS, Photoshop, etc. </p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://ik.imagekit.io/cooldunlin185005/black1_6WLWIejAP.jpg?updatedAt=1631251645988" alt="">
+                <div class="info">
+                <h2>Academy of Sarcasm</h2>
+                <p class="para">To be honest I pay less heed to my core subjects(Electrical Ones)... and I could hardly get a CGPA of 9.13(average) till my 6th semester. I am afraid this semester may be even worse. I spend a lot of time on my computer.. trying to learn and find new stuff.. What a loser I am!!</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://ik.imagekit.io/cooldunlin185005/black1_6WLWIejAP.jpg?updatedAt=1631251645988" alt="">
+                <div class="info">
+                <h2>Still Learning</h2>
+                <p class="para">I may say that I am not a full-stack developer yet. There may be a lot of things that are missing in my arsenal. Backend may be something which is on my TO-DO-LIST for near future. I want to make my DSA more strong. And hey!.. why am I telling you all these things! hehhehe... Just kidding. Hope I learn more and you don't find this stuff on this page next time you visit. <br><b>Have A Nice Day!! </b></p>
+                </div>
+            </div>
+            <div class="navigation">
+                <i class="fas fa-chevron-left prev-btn"><</i>
+                <i class="fas fa-chevron-right next-btn">></i>
+            </div>
+        </div>
+        
+    </section>
+
+</body>
+<script>
+    $("#threeBarOption").click(
+        function(){$("#threeBarList").delay(500).show();}
+    );
+    $("#back").click(
+        function(){$("#threeBarList").delay(500).hide();}
+    );
+    const slider = document.querySelector(".slider");
+    const nextBtn = document.querySelector(".next-btn");
+    const prevBtn = document.querySelector(".prev-btn");
+    const slides = document.querySelectorAll(".slide");
+    const slideIcons = document.querySelectorAll(".slide-icon");
+    const tabs = document.querySelectorAll(".images");
+    const numberOfSlides = slides.length;
+    var slideNumber = 0;
+
+    //image slider next button
+    nextBtn.addEventListener("click", () => {
+        slides.forEach((slide) => {
+        slide.classList.remove("active");
+        });
+        
+        tabs.forEach((tab) => {
+        tab.classList.remove("active-tab");
+        });
+
+
+        slideNumber++;
+
+        if(slideNumber > (numberOfSlides - 1)){
+        slideNumber = 0;
+        }
+
+        tabs[slideNumber].classList.add("active-tab");
+        slides[slideNumber].classList.add("active");
+        
+    });
+
+    //image slider previous button
+    prevBtn.addEventListener("click", () => {
+        slides.forEach((slide) => {
+        slide.classList.remove("active");
+        });
+        
+        tabs.forEach((tab) => {
+        tab.classList.remove("active-tab");
+        });
+
+        slideNumber--;
+
+        if(slideNumber < 0){
+        slideNumber = numberOfSlides - 1;
+        }
+
+        tabs[slideNumber].classList.add("active-tab");
+        slides[slideNumber].classList.add("active");
+        
+    });
+
+    //image slider autoplay
+    var playSlider;
+
+    var repeater = () => {
+        playSlider = setInterval(function(){
+        slides.forEach((slide) => {
+            slide.classList.remove("active");
+        });
+        
+        tabs.forEach((tab) => {
+        tab.classList.remove("active-tab");
+        });
+
+        slideNumber++;
+
+        if(slideNumber > (numberOfSlides - 1)){
+            slideNumber = 0;
+        }
+
+        tabs[slideNumber].classList.add("active-tab");
+        slides[slideNumber].classList.add("active");
+        
+        }, 4000);
+    }
+    repeater();
+
+    //stop the image slider autoplay on mouseover
+    slider.addEventListener("mouseover", () => {
+        clearInterval(playSlider);
+    });
+
+    //start the image slider autoplay again on mouseout
+    slider.addEventListener("mouseout", () => {
+        repeater();
+    });
+    //tabbing
+    document.getElementById(".active-")
+</script>
+</html>

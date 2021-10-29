@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/78b28b1eb9.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin: 0;
+        }
+        .links
+        {
+            color: black;
+            text-decoration: none;
+            margin-right:50px;
+            font-family: poppins;
+            transform: translateY(40px);
+            font-family: sans-serif;
+        }
+        header
+        {
+            height:60px;
+            display:sticky;
+            padding: 10px;
+        }
+        #btn
+        {
+            background-color:green;
+            color:white;
+            height:36px;
+            width: 150px;
+            border: none;
+            font-size: 16px;
+            border-radius: 6px;
+            margin-right:30px;
+    
+        }
+
+        #tree
+        {
+            width:36px;
+            border-radius: 50%;
+            position:relative;
+            right: -20px
+        }
+        #navigation-bar
+        {
+            text-align: end;
+            position:relative;
+            top:-50px;
+        }
+        #container-1
+        {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            padding-top: 50px;
+        }
+        .steps
+        {
+            text-align: center;
+            min-height: 400px;
+            height:300px;
+            padding: 60px 10px 80px 10px;
+            margin:20px;
+        }
+        .steps:hover{
+            transform: scale(1.05);
+            transition: all 0.5s;
+        }
+        .container-paragraph
+        {
+            font-family: poppins;
+            line-height: 30px;
+            font-size: 20px;
+        }
+        #container-2
+        {
+            margin-top: 100px;
+            background-color: antiquewhite;
+            
+        }
+        #inner-container-1
+        {
+            text-align: center;
+            padding: 80px ;
+        }
+        #inner-container-2
+        {
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 400px;
+            justify-content: space-around;
+            font-family: poppins;
+        }
+        #inner-container-2 img{
+            width: 400px;
+            height: 300px;
+        }
+        .inner-container-items
+        {
+            margin-right: 30px;
+        }
+        #upper-para
+        {
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            font-size: large;
+        }
+        .inner-container-3 img
+        {
+            width: 100px;
+            height:100px;
+            border-radius: 50% ;
+        }
+        .inner-container-3
+        {
+            color: grey;
+            text-align: center;
+            font-family:serif;
+            font-size:medium;
+            
+        }
+        .inner-container-3 p
+        {
+            padding-top: 20px;
+        }
+        #big-inner-container
+        {
+            display:flex;
+            justify-content: space-around;
+            padding: 20px;
+            padding: 50px 20px;
+            box-shadow: 6px 6px 10px grey;
+        }
+        #container-4
+        {
+            margin-top: 100px;
+            display:grid;
+            grid-template-columns: 70% 30%;
+            filter:grayscale(40%);
+            grid-gap: 0;
+        }
+        #inner-container-4
+        {
+            text-align: center;
+            
+            padding-top:100px;
+            background-color: antiquewhite;
+        }
+        #inner-container-4 p:first-of-type{
+            color:lightslategray;
+            font-family: serif;
+            width: 200px;
+            transform:translateX(130px);
+        }
+        #inner-container-4 p:nth-of-type(2){
+            margin-top: 20px;
+            font-family: sans-serif;
+        }
+        #inner-container-4 button
+        {
+            background-color: darkmagenta;
+            width: 150px;
+            height: 40px;
+            color: white;
+            position: relative;
+            bottom: -70px;
+        }
+        #inner-container-4 input
+        {
+            border:none;
+            width: 350px;
+            height:30px;
+            
+        }
+        #social{
+            text-align: center;
+            font-family: poppins;
+            font-size: 50px;
+            padding: 100px 0px;
+            
+        }
+        #links{
+            padding: 10px 600px;
+            color: black;
+        }
+        #links a{
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+    
+
+    <title>My Stuff</title>
+</head>
+<body>
+    <header>
+        <img id="tree"src="https://ik.imagekit.io/cooldunlin185005/images_ikatOyV15J.jpeg?updatedAt=1631195252914"/>
+        <nav id="navigation-bar">
+            <a class="links" href="Home">Home</a>
+            <a class="links" href="#container-2">Skills</a>
+            <a class="links" href="#social">Social</a>
+            <button id="btn" onclick="dont()">Don't click on me.</button>
+        </nav>
+    </header>
+    <img src="https://ik.imagekit.io/cooldunlin185005/myphoto_rTrWnUpCQ.jpg?updatedAt=1631195256235" width=100% margin=0/>
+    <div id="container-1">
+        <div class="steps" style="background-color:pink;">
+            <i class="fas fa-cut fa-8x"></i>
+            <h1>Editting</h1>
+            <div class="container-paragraph">
+                    <ul>
+                        <li>Photoshop</li>
+                        <li>Premiere Pro</li>
+                        <li>Kinemaster</li>
+                        <li>InShot</li>
+                    </ul>
+            </div>
+        </div>
+        <div class="steps" style="background-color:lightblue;">
+            
+            <i class="fas fa-paint-brush fa-8x"></i>
+            <h1>Web Designing</h1>
+            
+            <div class="container-paragraph">
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>WordPress</li>
+                </ul>
+            </div>
+        </div>
+        <div class="steps" style="background-color:lightgreen;">
+            
+            
+            <i class="fas fa-smile fa-8x"></i>
+            <h1>Programming Languages</h1>
+            
+            <div class="container-paragraph">
+                <ul>
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>C</li>
+                </ul>
+            </div>
+        </div>
+        <div class="steps" style="background-color:lightcoral;">
+            <i class="fas fa-shopping-bag fa-8x"></i>
+            <h1>Experience</h1>
+            
+            <div class="container-paragraph">
+                <ul>
+                    <li>Web Developer at A Plus Digital Solutions</li>
+                    <li>Web Developer intern at Sociolabs</li>
+                    <li>Web Developer intern at TEN</li>
+                    <li>Campus Ambassador at ToffeeTeens</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="container-2">
+        <div id="inner-container-1">
+            <p style="font-style:italic">#GoLearning</p>
+            <h1>My Bank of Certificates</h1>
+            <p style="font-family: poppins; font-size: 16px;padding: 10px 100px;">Through the course of time I did a few online courses on platforms like Udemy and GeeksforGeeks. Thanks to the youtube channels like TrickyMan and Apna College and legends like Aman Dhatarwal Bhaiya.. who have made self learning so easy.</p>
+        </div>
+        <div id="inner-container-2">
+            <div class="inner-container-items">
+                <img src="https://ik.imagekit.io/cooldunlin185005/python_udemy_certificate_photo_Z2jA0bTPq22.jpg?updatedAt=1631282104664">
+                <h2>Python - Udemy</h2>
+            </div>
+            <div class="inner-container-items">
+                <img src="https://ik.imagekit.io/cooldunlin185005/js_certificate_5zz_Y0sv0.PNG?updatedAt=1631282104716">
+                <h2>JavaScript - Udemy</h2>
+            </div>
+            <div class="inner-container-items">
+                <img src="https://ik.imagekit.io/cooldunlin185005/CSS_certificate_AV7nZIoG2I.jpg?updatedAt=1631282104551">
+                <h2>CSS - Udemy</h2>
+            </div>
+            <div class="inner-container-items">
+                <img src="https://ik.imagekit.io/cooldunlin185005/pic_pdZds54yf.PNG?updatedAt=1631282102117">
+                <h2>WordPress - Udemy</h2>
+            </div>
+            <div class="inner-container-items">
+                <img src="https://ik.imagekit.io/cooldunlin185005/ML_certificate_ALwRTUaw31.PNG?updatedAt=1631282084882">
+                <h2>Machine Learning - GeeksforGeeks</h2>
+            </div>
+            <div class="inner-container-items">
+                <img src="https://ik.imagekit.io/cooldunlin185005/sociolabs_certificate_uBeIVx5Ap.PNG?updatedAt=1631282094736">
+                <h2>Internship Certificate - SocioLabs</h2>
+            </div>
+            <div class="inner-container-items">
+                <img src="https://ik.imagekit.io/cooldunlin185005/TEN_certicficate_oev1IqPbMZ.PNG?updatedAt=1631282094851">
+                <h2>Internship Certificate - TEN</h2>
+            </div>
+            <div class="inner-container-items">
+                <img src="https://ik.imagekit.io/cooldunlin185005/talentbattle_certificate_ZqUF78xaFq.PNG?updatedAt=1631282097022">
+                <h2>Appreciation Certificate - TalentBattle</h2>
+            </div>
+        </div>
+    </div>
+    <div id="social">
+        <h2>Social Media where you can find me!</h2>
+        <div id="links">
+            <ol>
+                <li><a target="_blank" href="https://www.linkedin.com/in/ashish-bisht-4608bb183/">LinkedIn</a></li>
+                <li><a target="_blank" href="https://github.com/ashish12345bisht">Github</a></li>
+                <li><a target="_blank" href="https://www.facebook.com/badshah.bisht.779205/">Facebook</a></li>
+                <li><a target="_blank" href="https://www.instagram.com/https__ashishbisht/">Instagram</a></li>
+            </ol>
+        </div>
+        
+    </div>
+</body>
+<script>
+    function dont()
+    {
+        alert("Told ya!! I don't do anything.. hahahahaha")
+    }
+</script>
+</html>

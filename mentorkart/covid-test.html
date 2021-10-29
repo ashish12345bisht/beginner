@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID Test</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin: 10px 450px;
+            text-align: center;
+            background-color: #181717;
+            font-family: "Poppins";
+        }
+        #testbody{
+            background-color: #071f70;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        .visible{
+            visibility:hidden;
+        }
+        .design-left{
+            color: #181717;
+            border: 2px solid rgb(108, 108, 223);
+            background-color: #A9D7E9;
+            border-radius: 10px;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        .design-right{
+            color: #181717;
+            font-weight: 400;
+            box-sizing: border-box;
+            border: 2px solid rgb(102, 209, 102);
+            background-color: #7EF482;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        #big-button{
+            padding: 40px;
+            font-size: 20px;
+            border-radius: 20px;
+        }
+        .left-div{
+            left: 10px;
+            text-align: left;
+            color: white;
+            padding: 10px 10px;
+        }
+        .right-div{
+            right: 10px;
+            text-align: right;
+            color:white;
+            padding: 10px 0px;
+        }
+        .next-button{
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 10px;
+            background-color: yellow;
+        }
+        #report{
+            animation: grower 2s 1;
+            animation-fill-mode: forwards;
+            display:none;
+        }
+        @keyframes grower {
+            0%{
+                transition: transform 1s;
+                transform: scale(1) translate(0px,-200px);
+            }
+            100%{
+                transition: transform 1s;
+                transform: scale(6) translate(35px,-100px);
+            }
+        }
+        @media(max-width:400px){
+            body{
+                margin: 10px;
+            }
+            @keyframes grower {
+            0%{
+                transition: transform 1s;
+                transform: scale(1) translate(0px,-200px);
+            }
+            100%{
+                transition: transform 1s;
+                transform: scale(2) translate(35px,-100px);
+            }
+        }
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:white;">Test if you are COVID positive</h1>
+    <button id="big-button" onclick=visible()>Self Assess</button>
+    <div id="testbody">
+        <div class="left-div visible" id="left-div-1">
+            <p>What is your age?</p>
+            <input class="design-right" type="text" id="age">
+            <button id="age-next" class="next-button" onclick=age_next()>Next</button>
+        </div>
+        <div class="right-div visible" id="right-div-1">
+            <input class="design-left" type="text" id="age-out" readonly>
+        </div>
+        <div class="left-div visible" id="left-div-2">
+            <p>Have you taken Vaccination</p>
+            <input class="design-right" type="radio" id="Yes" value="Yes" name="vaccine">
+            <label>Yes</label><br>
+            <input class="design-right" type="radio" id="No" value="No" name="vaccine">
+            <label>No</label><br>
+            <button id="vaccine-next" class="next-button" onclick=vaccine_next()>Next</button>
+        </div>
+        <div class="right-div visible" id="right-div-2">
+            <input class="design-left" type="text" id="vaccine-out" readonly>
+        </div>
+        <div class="left-div visible" id="left-div-3">
+            <p>When did you go out of town last(months)</p>
+            <select name="months" id="months">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+            </select>
+            <button id="time-next" class="next-button" onclick=time_next()>Next</button>
+        </div>
+        <div class="right-div visible" id="right-div-3">
+            <input class="design-left" type="text" id="time-out" readonly>
+        </div>
+        <div class="left-div visible" id="left-div-4">
+            <p>Are you having any of these symptoms?</p>
+            <input type="checkbox" name="symptoms" value="None">
+            <label>None</label><br>
+            <input type="checkbox" name="symptoms" value="Dry cough">
+            <label>Dry cough</label><br>
+            <input type="checkbox" name="symptoms" value="Fever">
+            <label>Fever</label><br>
+            <input type="checkbox" name="symptoms" value="Tiredness">
+            <label>Tiredness</label><br>
+            <input type="checkbox" name="symptoms" value="Loss of taste or smell">
+            <label>Loss of taste or smell</label><br>
+            <input type="checkbox" name="symptoms" value="Chest pain">
+            <label>Chest pain</label><br>
+            <input type="checkbox" name="symptoms" value="Headache">
+            <label>Headache</label><br>
+            <input type="checkbox" name="symptoms" value="Diarrheoa">
+            <label>Diarrheoa</label><br>
+            <button class="next-button" onclick=final()>Next</button><br>
+        </div>
+        <div>
+            <textarea id="report" readonly></textarea>
+        </div>
+    </div>
+    <p style="color: white;">Made by <a>Ashish</a></p>
+    <script>
+        function visible(){
+            document.getElementById("testbody").style.display="block";
+            document.getElementById("left-div-1").style.visibility="visible";
+        }
+        function age_next(){
+            var age = document.getElementById("age").value;
+            document.getElementById("age-out").value=age;
+            document.getElementById("right-div-1").style.visibility="visible";
+            document.getElementById("left-div-2").style.visibility="visible";
+        }
+        function vaccine_next(){
+            if(document.getElementById("Yes").checked)
+            {
+                var vaccine=document.getElementById("Yes").value;
+                document.getElementById("vaccine-out").value=vaccine;
+                document.getElementById("right-div-2").style.visibility="visible";
+                document.getElementById("left-div-3").style.visibility="visible";
+            }
+            else if(document.getElementById("No").checked)
+            {
+                var vaccine=document.getElementById("No").value;
+                document.getElementById("vaccine-out").value=vaccine;
+                document.getElementById("right-div-2").style.visibility="visible";
+                document.getElementById("left-div-3").style.visibility="visible";
+            }
+        }
+        function time_next(){
+            var time=document.getElementById("months");
+            time= time.options[time.selectedIndex].text;
+            document.getElementById("time-out").value = time;
+            document.getElementById("right-div-3").style.visibility="visible";
+            document.getElementById("left-div-4").style.visibility="visible";
+        }
+        function final(){
+            var symptoms=document.getElementsByName("symptoms");
+            var count=0;
+            for(var a =0; a<symptoms.length;a++)
+            {
+                if(symptoms[a].checked){
+                    if(symptoms[a].value == "None")
+                    {
+                        document.getElementById("report").value="you are at low risk of infection";
+                        break;
+                    }
+                    else{
+                        console.log("bad");
+                        count +=1;
+                    }
+                }
+            }
+            document.getElementById("report").style.display="block";
+            if(count<3 && count!=0){
+                document.getElementById("report").value="you have slight symptoms";
+            }
+            else if(count<5 && count!=0){
+                document.getElementById("report").value="you have mild symptoms";
+            }
+            else if(count<8 && count!=0){
+                document.getElementById("report").value="you have severe symptoms";
+            }
+        }
+    </script>
+</body>
+</html>

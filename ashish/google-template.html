@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Fake Google</title>
+    <style>
+        body
+        {
+            font-family: Arial, sans-serif;
+            padding:0 16px;
+        }
+        nav
+        {
+            text-align: right;
+        }
+        .menu-items
+        {
+            font-size: 13px;
+            color: rgba(0, 0, 0, 0.87);
+            text-decoration:none;
+            position: relative;
+            top:-8px;
+            margin-right: 16px;
+        }
+        .menu-items:hover
+        {
+            text-decoration: underline;
+        }
+        #dropdown-menu
+        {
+            width: 50px;
+            height: 50px;
+            color:rgba(0, 0, 0, 0.87);
+            position: relative;
+            top:-3px;
+            margin-right: 16px;
+            margin-left: 0;
+        }
+        #image
+        {
+            width:32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+        section{
+            text-align: center;
+            padding-top:200px;
+        }
+        #search-box
+        {
+            width: 582px;;
+            border-radius: 24px;
+            color:#222;
+            border: 1px solid #dfe1e5;
+            padding:14px;
+            font-size:13px;
+            outline:none;
+            margin-top: 24px;
+            margin-bottom: 24px;
+        }
+        #search-box:hover{
+            box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+            border-color:  rgba(223,225,229,0);
+        }
+        #search-box:focus{
+            box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+            border-color:  rgba(223,225,229,0);
+        }
+        #input-wrapper
+        {
+            position:relative;
+            width: 582px;
+            display:inline
+        }
+        #input-wrapper > img
+        {
+            position:absolute;
+            top:0;
+            right:0;
+            height: 35px;
+            top:-7px;
+            margin-right: 6px;
+
+        }
+        .custom-buttons
+        {
+            background-color: #f2f2f2;
+            color: #5F6368;
+            font-size: 14px;
+            height: 36px;
+            padding: 0 16px;
+            background-image: linear-gradient(top,#f5f5f5,#f1f1f1);
+            border: 1px solid transparent;
+            box-shadow: 0 1px 1px rgba(0,0,0,0);
+            color: #222;
+            margin: 5px;
+        }
+        .custom-buttons:hover
+        {
+            background-image:linear-gradient(top,#f8f8f8,#f1f1f1);
+            border: 1px solid #c6c6c6;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+            color: #222;
+        }
+        #app-dropdown
+        {
+            width: 285px;
+            padding: 28px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 10px rgba(0,0,0,.2);
+            position:absolute;
+            right:100px;
+            display:none;
+        }
+        .app-item
+        {
+            display:inline-block;
+            width:84px;
+            margin-bottom: 18px;
+            padding: 2px 2px;
+            text-align: center;
+        }
+        .app-item > img{
+            width:50px;
+            height:50px;
+        }
+        .app-item > p{
+            color:rgba(0, 0, 0, 0.87);
+            margin:0;
+            padding:8px;
+        }
+        .app-item:hover{
+            border:1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        #drop-down-wrapper
+        {
+            display:inline-block;
+        }
+        #drop-down-wrapper:hover 
+        #app-dropdown{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <a class="menu-items" href="/">Gmail</a>
+            <a class="menu-items" href="/">Images</a>
+            <div id= "drop-down-wrapper">
+                <i id="dropdown-menu" class="material-icons">apps</i>
+                <div id="app-dropdown">
+                    <div class="app-item">
+                        <img src="http://pluspng.com/img-png/google-logo-png-open-2000.png">
+                        <p>Search</p>
+                    </div>
+                    <div class="app-item">
+                        <img src="http://pluspng.com/img-png/google-maps-png-google-maps-icon-1600.png">
+                        <p>Maps</p>
+                    </div>
+                    <div class="app-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Google_Drive_logo.png">
+                        <p>Drive</p>
+                    </div>
+                    <div class="app-item">
+                        <img src="https://ik.imagekit.io/cooldunlin185005/download_nC6NUCny0-.png?updatedAt=1631188837487">
+                        <p>Calender</p>
+                    </div>
+                    <div class="app-item">
+                        <img src="https://blogs.acu.edu/innovation_foundry/files/2017/06/google_photos1600.png">
+                        <p>Photos</p>
+                    </div>
+                    <div class="app-item">
+                        <img src="https://i.pinimg.com/originals/09/96/92/099692d1d651d51b7caf3040fce0f748.png">
+                        <p>Keep</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <img id = "image" src="https://ik.imagekit.io/cooldunlin185005/img_OQ0Np50kXx.jpg?updatedAt=1631188838200" alt="profile pic"/>
+            
+        </nav>
+        <main>
+            <section>
+                <img id = "google" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"/><br>
+                <div id = "input-wrapper">
+                    <input id = "search-box" />
+                    <img src="https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png" />
+                </div>
+                <div></div>
+                    <button class="custom-buttons">Google Search</button>
+                    <button class="custom-buttons">I'm feeling lucky</button>
+                </div>
+                
+            </section>
+        </main>
+    </header>
+    
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>client page</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
+        h1{
+            text-align: center;
+            font-family:"Poppins";
+            font-size: 36px;
+            line-height: 47px;
+            color: #27272f;
+            margin-bottom: -10px;
+        }
+        #petal1{
+            transform: translateX(720px);
+            padding-top: 10px;
+        }
+        #big-container{
+            padding-top: 50px;
+            display: flex;
+            justify-content: space-around;
+            margin: 0 200px;
+        }
+        .vertical-containers{
+            width: 500px;
+        }
+        .vertical-containers img{
+            width: 464px;
+            height: 424px;
+        }
+        .heading{
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 500;
+            font-family: "Poppins";
+            color: #181717;
+        }
+        .heading:hover{
+            color: #91ac41;
+        }
+        .paragraph{
+            font-size: 14px;
+            line-height: 22px;
+            color: #8b8b99;
+            font-family: "Poppins";
+            font-weight: 400;
+            text-align: left;
+        }
+        @media (max-width:900px) {
+            #big-container{
+                flex-direction: column;
+                margin: 0 100px;
+            }
+            #petal1{
+                transform: translateX(343px);
+            }
+        }
+        @media (max-width:500px) {
+            #big-container{
+                flex-direction: column;
+                margin: 0 25px;
+            }
+            .vertical-containers{
+                width: 400px;
+            }
+            #petal1{
+                transform: translateX(200px);
+            }
+            h1{
+                transform: translateX(60px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>FAQ</h1>
+    <img id = "petal1"src="http://poshn.sociolabs.in/wp-content/uploads/2017/08/below-heading.png">
+    <div id="big-container">
+        <div class="vertical-containers">
+            <div>
+                <h3 class="heading">What is PoSHn? what does it stand for?</h3>
+                <p class="paragraph"><span style="display:block;"><strong">पोषण + POTION = POSHN</strong></span><br>
+
+                    Poshn is a health drink brand which makes Functional Super juices. We call it a functional super juice because each variant has a certain function to perform once you consume it. One variant would recharge your body with herbs like Ginseng while the other would relax your body with the help of Chamomile flower extracts and other nutritional fruits.</p>
+            </div>
+            <div>
+                <h3 class="heading">What are the ingredients in relax?</h3>
+                <p class="paragraph">Relax is made of cherries and berries like Strawberry, Cranberry and is boosted along with chamomile flower extract and Stevia. (Refer bottle for further details)</p>
+            </div>
+            <div>
+                <h3 class="heading">Calories in PoSHn super bottle</h3>
+                <p class="paragraph">Both our bottles are extremely low on calories. Our Recharge drink is only 30 kcal / 100 ml and our Relax drink is only 25 kcal/ 100 ml</p>
+            </div>
+            <div>
+                <h3 class="heading">Is there added sugar in the super juice bottle?</h3>
+                <p class="paragraph">Every PoSHn product comes with a promise of no added sugar. The sweetness is derived from a natural sweetner called Stevia and the natural sweetness is from fructose contained in the fruits. We’re going all natural!</p>
+            </div>
+            <div>
+                <h3 class="heading">Is it a cold pressed drink?</h3>
+                <p class="paragraph">No. It is a concentrated drink</p>
+            </div>
+        </div>
+        <div class="vertical-containers">
+            <img src="http://poshn.sociolabs.in/wp-content/uploads/2019/02/knowledge-FAQ.png">
+        </div>
+        <div class="vertical-containers">
+            <div>
+                <h3 class="heading">What are the ingredients in Recharge?</h3>
+                <p class="paragraph">Recharge is a delicate blend of all the tropical fruits like Mango, Passion Fruit and herbs like Green Tea and Ginseng. (Refer bottle for further details)</p>
+            </div>
+            <div>
+                <h3 class="heading">What is the shelf life of PoSHn superjuice?</h3>
+                <p class="paragraph">The shelf life of each bottle is 6 months from manufacturing. Once opened, should be consumed within 24 hours.</p>
+            </div>
+            <div>
+                <h3 class="heading">Does it have caffeine?</h3>
+                <p class="paragraph">PoSHn super juices don’t have any added caffeine but, PoSHn Recharge variant has green tea which naturally contains a very low amount of caffeine</p>
+            </div>
+            <div>
+                <h3 class="heading">What are the flowers and herbs mixed?</h3>
+                <p class="paragraph">Recharge has Green Tea and Ginseng, while Relax has chamomile. Both our variants are sweetened with Stevia.</p>
+            </div>
+            <div>
+                <h3 class="heading">How is PoSHn better than other energy and aerated drinks?</h3>
+                <p class="paragraph"><span style="display:block;">PoSHn is better than other energy drinks, as PoSHn does not have any harmful chemicals that forcefully increase your heart rate.</span><br>
+                    
+                    <span style="display:block;">PoSHn is also better than other aerated drinks, as it does not contain any added sugar or carbon dioxide.</span><br>
+                    
+                    We have laid our foundation just on the basis of fruits, natural components, and surprisingly, even natural sugar- which makes us way healthier and tastier than any other energy and aerated drinks.<br></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

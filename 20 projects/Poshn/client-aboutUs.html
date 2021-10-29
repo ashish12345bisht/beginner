@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>client page1</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        #slider{
+            width:100%;
+            height:600px;
+            background-color: black;
+        }
+        h1{
+            text-align: center;
+            font-family:"Poppins";
+            font-size: 36px;
+            line-height: 47px;
+            color: #27272f;
+            margin-bottom: -10px;
+        }
+        #big-container{
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: auto;
+        }
+        .containers{
+            display: flex;
+            padding: 10px;
+            height: 320px;
+        }
+        .containers div{
+            padding: 20px;
+            font-family: "Poppins";
+            color: #8b8b99;
+            font-size: 14px;
+            line-height: 22px;
+        }
+        .images-1{
+            width: 240px;
+            height: 300px;
+        }
+        .images-2{
+            width: 250px;
+        }
+        #founder-container{
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 150px;
+        }
+        #founder-container p{
+            font-size: 14px;
+            line-height: 22px;
+            color: #8b8b99;
+            font-family: "Poppins";
+        }
+        #client-image{
+            width: 600px;
+        }
+        #client-container-heading{
+            text-align: left;
+        }
+        #petal1{
+            transform: translateX(725px);
+            padding-top: 10px;
+        }
+        #petal2{
+            transform: translateX(250px);
+            padding-top: 10px;
+        }
+        .slider{
+            position: relative;
+            background: #000116;
+            width: 100%;
+            min-height: 600px;
+            margin: 0;
+            overflow: hidden;
+            margin-bottom: 100px;
+            }
+
+        .slider .slide{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            clip-path: circle(0% at 0 50%);
+        }
+
+        .slider .slide.active{
+            clip-path: circle(150% at 0 50%);
+            transition: 2s;
+        }
+
+        .slider .slide img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slider .slide .info{
+            position: absolute;
+            color: #ffffff;
+            width: 50%;
+            text-align: center;
+            font-family: "Poppins";
+            margin-top: 150px;
+            margin-left: 50px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+        }
+
+
+        .navigation{
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .slider:hover .navigation{
+            opacity: 1;
+        }
+
+        .prev-btn, .next-btn{
+            z-index: 999;
+            font-size: 2em;
+            color: #222;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .prev-btn{
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+        .next-btn{
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+        }
+        h2{
+            font-size: 43px;
+            line-height: 50px;
+            font-weight: 400;
+        }
+        .para{
+            font-size: 21px;
+            line-height: 29px;
+            font-weight: 400;
+        }
+        .navigation-visibility{
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navigation-visibility .slide-icon{
+            z-index: 999;
+            background: rgba(255, 255, 255, 0.5);
+            width: 20px;
+            height: 10px;
+            transform: translateY(-50px);
+            margin: 0 6px;
+            border-radius: 2px;
+            box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+        }
+
+        .navigation-visibility .slide-icon .active{
+            background: #4285F4;
+        }
+
+        @media (max-width: 900px){
+            .slider{
+                width: 100vh;
+            }
+
+            .slider .slide .info{
+                position: relative;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #petal2{
+                transform: translateX(0);
+            }
+            #big-container{
+                width: 100vh;
+            }
+            #top-head{
+                transform: translateX(120px);
+            }
+            .containers div{
+                width: 80vh;
+                padding: 0;
+            }
+            #petal1{
+                transform: translateX(480px);
+            }
+            #founder-container{
+                flex-direction: column;
+                padding: 0;
+                width: 100vh;
+                text-align: center;
+            }
+            #founder-container p{
+                padding: 0 50px;
+            }
+            .text{
+                padding: 50px;
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 500px){
+            .slider{
+                width:100vh;
+            }
+            
+            .slider .slide .info h2{
+                font-size: 1.8em;
+                line-height: 40px;
+            }
+            
+            .slider .slide .info p{
+                font-size: 0.9em;
+            }
+            #petal2{
+                transform: translateX(0);
+            }
+            #big-container{
+                width: 100vh;
+            }
+            #top-head{
+                transform: translateX(170px);
+            }
+            #petal1{
+                transform: translateX(325px);
+            }
+            #founder-container{
+                flex-direction: column;
+                padding: 0;
+                width: 100vh;
+                text-align: center;
+            }
+            #founder-container p{
+                padding: 0 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slide active">
+            <img src="https://ik.imagekit.io/cooldunlin185005/img4_HGkV6kHkH.jpg?updatedAt=1631194654336" alt="">
+            <div class="info">
+            <h2>WHAT MAKES POSHN</h2>
+            <p class="para">Poshn is a brand launched by the company Fettle Works LLP. The word 'Fettle' means to be fit, and thereby, the goal of the company has always been to make cool and fun products, that not only help in health and fitness, but also make no sacrifices on taste whatsoever.</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://ik.imagekit.io/cooldunlin185005/img3_kxT4O88DI.jpg?updatedAt=1631194653610" alt="">
+            <div class="info">
+            <h2>WHAT MAKES POSHN</h2>
+            <p class="para">"With Posh. we have strived to create a yummy functional juice, that is low on calories, has no added sugar, and completely natural, just to give our customers a delicious, guilt free, healthy and nutritious solution to their daily needs." - Rahul Kakkad<br> We look forward to launching more and more products that will change the way we look at healthy products.            </p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://ik.imagekit.io/cooldunlin185005/img2_Qr9YFn6DoI.jpg?updatedAt=1631194652862" alt="">
+            <div class="info">
+            <h2>WHAT MAKES POSHN</h2>
+            <p class="para">We believe, we have created formula to help one energize when feeling low, relax when one needs it the most. With no sacrifices made on taste, thanks to the delicious fruits handpicked by us, we have made sure we deliver on the function by boosting these juices with herbs such as Green Tea, Ginseng and Chamomile, thereby creating a recipe that we like to truly call: #NaturesOwnFormula</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://ik.imagekit.io/cooldunlin185005/img1_lUKZKU5kT.jpg?updatedAt=1631194652407" alt="">
+            <div class="info">
+            <h2>WHAT MAKES POSHN</h2>
+            <p class="para">Fruits + Herbs = Function // Our Secret Potion<br> We Also further add vitamins and minerals along with Stevia for sweetness, which leaves us with a very nutritious, low calorie product, without any added sugar, which is how we came up with the hindi term: Poshn,<br> This eventually led us to creating our brand name: <br> पोषण + POTION = POSHN</p>
+            </div>
+        </div>
+        <div class="navigation">
+            <i class="fas fa-chevron-left prev-btn"><</i>
+            <i class="fas fa-chevron-right next-btn">></i>
+        </div>
+    </div>
+    <h1 id="top-head">SLAYING SINCE 2016, SEE HOW!</h1>
+    <img id = "petal1"src="http://poshn.sociolabs.in/wp-content/uploads/2017/08/below-heading.png">
+    <div id="big-container">
+        <div><h1>2016</h1></div>
+        <div class="containers">
+            <div>
+                <img class="images-1"src="http://poshn.sociolabs.in/wp-content/uploads/2019/02/30087687_238892893342400_4653938893073154048_n-300x375.jpg">
+            </div>
+            <div>
+                <p class="text"><strong>We began the research.</strong><br>
+                    <span >– We started looking for the right ingredients that could help in either Energy or Relaxation<br>
+                    – We started looking for the right vendors and manufacturers to help us with the manufacturing process</span></p>
+            </div>
+        </div>
+        <h1>2017</h1>
+        <div class="containers">
+            <div>
+                <p class="text"><strong>After Various types of trials and errors, we began SAMPLING!</strong><br>
+                    <span > 
+                        – We personally stood at each and every stall<br>
+                        – We heard what the customers had to say and made tweaks based on that<br>
+                        – After a successful sampling of almost 6 months, we were ready to hit the market</span></p>
+            </div>
+            <div>
+                <img class="images-all"class="images-2"src="http://poshn.sociolabs.in/wp-content/uploads/2019/02/29404398_392811754518267_4878047735367860224_n-Copy-300x300.jpg">
+            </div>
+        </div>
+        <h1>2018</h1>
+        <div class="containers">
+            <div>
+                <img class="images-1"src="http://poshn.sociolabs.in/wp-content/uploads/2019/02/38934146_238321530157176_7745069393360453632_n-300x375.jpg">
+            </div>
+            <div>
+                <p class="text"><strong>Hitting the market</strong><br>
+                    <span >
+                        – A large part of this year was spent in solving all the legalities and government formalities.<br>
+                        – All lab tests and shelf life studies were done and then we were ready to make our distribution tie ups<br>
+                        – By October, we had taken our first step into retail.<br>
+                        – By November, we had started selling online.</span></p>
+            </div>
+        </div>
+        <h1>2019</h1>
+        <div class="containers">
+            <div>
+                <p class="text"><strong>The call of Victory</strong><br>
+                    <span>
+                        –  ​Poshn won the Golden Spoon Award for the ‘Most Admired Food Start-Up Of the Year’ at the India Food Forum.​<br>
+                        – Thousands of happy customers, joining the squad of  Deliciously Natural Poshn lifestyle.</span></p>
+            </div>
+            <div>
+                <img class="images-2"src="http://poshn.sociolabs.in/wp-content/uploads/2019/02/IMG_20190208_131745-300x225.jpg">
+            </div>
+        </div>
+    </div>
+    <div id="founder-container">
+        <div>
+            <img id="client-image"src="http://poshn.sociolabs.in/wp-content/uploads/2019/02/founder.png">
+        </div>
+        <div>
+            <h1>FOUNDER - MR. RAHUL KAKKAD</h1>
+            <img id="petal2"src="http://poshn.sociolabs.in/wp-content/uploads/2017/08/below-heading.png">
+            <p>Rahul H. Kakkad</p>
+            <p>Education: University of Southern California<br>
+                Major: Industrial & Systems Engineering<br>
+                Minor: Entrepreneurship<br>
+                Background: 3 time National Champion in Swimming.<br>
+                Venture 1: ULTRA MILE tyres – Founder</p>
+            <p>During his journey developing his tyre business, our founder realised he was Lactose intolerant, and could no longer have a cup of coffee. Tired of all the unhealthy sugary energy drinks available in the market, the idea of creating an energy drink was born.</p>
+            <p>During this research, we also realised that there were only unhealthy remedies to help one destress and relax. So we began developing both Energy and Relaxation juices.</p>
+            <p>They say 8 glasses of water a day, keeps your symptoms away.
+                But our founder says, Poshn a day gets you going and helps you slay.</p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const slider = document.querySelector(".slider");
+        const nextBtn = document.querySelector(".next-btn");
+        const prevBtn = document.querySelector(".prev-btn");
+        const slides = document.querySelectorAll(".slide");
+        const slideIcons = document.querySelectorAll(".slide-icon");
+        const numberOfSlides = slides.length;
+        var slideNumber = 0;
+    
+        //image slider next button
+        nextBtn.addEventListener("click", () => {
+          slides.forEach((slide) => {
+            slide.classList.remove("active");
+          });
+          slideIcons.forEach((slideIcon) => {
+            slideIcon.classList.remove("active");
+          });
+    
+          slideNumber++;
+    
+          if(slideNumber > (numberOfSlides - 1)){
+            slideNumber = 0;
+          }
+    
+          slides[slideNumber].classList.add("active");
+          slideIcons[slideNumber].classList.add("active");
+        });
+    
+        //image slider previous button
+        prevBtn.addEventListener("click", () => {
+          slides.forEach((slide) => {
+            slide.classList.remove("active");
+          });
+          slideIcons.forEach((slideIcon) => {
+            slideIcon.classList.remove("active");
+          });
+    
+          slideNumber--;
+    
+          if(slideNumber < 0){
+            slideNumber = numberOfSlides - 1;
+          }
+    
+          slides[slideNumber].classList.add("active");
+          slideIcons[slideNumber].classList.add("active");
+        });
+    
+        //image slider autoplay
+        var playSlider;
+    
+        var repeater = () => {
+          playSlider = setInterval(function(){
+            slides.forEach((slide) => {
+              slide.classList.remove("active");
+            });
+            slideIcons.forEach((slideIcon) => {
+              slideIcon.classList.remove("active");
+            });
+    
+            slideNumber++;
+    
+            if(slideNumber > (numberOfSlides - 1)){
+              slideNumber = 0;
+            }
+    
+            slides[slideNumber].classList.add("active");
+            slideIcons[slideNumber].classList.add("active");
+          }, 4000);
+        }
+        repeater();
+    
+        //stop the image slider autoplay on mouseover
+        slider.addEventListener("mouseover", () => {
+          clearInterval(playSlider);
+        });
+    
+        //start the image slider autoplay again on mouseout
+        slider.addEventListener("mouseout", () => {
+          repeater();
+        });
+        </script>
+</body>
+</html>
