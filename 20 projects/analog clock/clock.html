@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body{
             text-align: center;
             margin: 0;
-            overflow: hidden;
             background-image: url("https://ik.imagekit.io/cooldunlin185005/starry-night-sky_KdWGKBL7DJ.jpg?updatedAt=1631271657230");
         }
         #canvas
@@ -20,13 +21,11 @@
         }
         #timer{
             background-image: transparent;
+            position: relative;
             height: 60px;
             font-size: 50px;
-            padding: 0 100px;
             color: white;
             font-family: poppins;
-            animation: timeMover 10s infinite;
-            animation-direction: alternate;
         }
         h1{
             font-family: poppins;
@@ -41,24 +40,32 @@
             width: 40px;
             height: 40px;
         }
-        #messenger{
+        button{
             color: white;
             background-color: black;
+            border: none;
             height: 50px;
             width: 100px;
             font-family: poppins;
         }
-        #messenger:hover{
+        button:hover{
             transform: scale(1.05);
             transition: all 1s;
             cursor: pointer;
         }
-        @keyframes timeMover {
-            0%{
-                transform: translateX(-50%);
+        @media screen and (max-width:600px) {
+            button{
+                width: 150px;
+                height: 80px;
+                font-size: 0.5em;
             }
-            100%{
-                transform: translateX(50%);
+            input.day{
+                width: 15px;
+                transform: translateY(10px);
+            }
+            label{
+                
+                font-size: 0.5em;
             }
         }
 
@@ -76,10 +83,14 @@
             <h1>Welcome to the clock-world</h1>
             <p id = "timer"></p>
             <div id="greeting">
-                <input class="day" type="radio" id="niceDay" name="day">
-                <label for="niceDay">Having a nice day?</label>
-                <input class="day" type="radio" id="badDay" name="day">
-                <label for="niceDay">Not so much</label>
+                <div>
+                    <input class="day" type="radio" id="niceDay" name="day">
+                    <label for="niceDay">Having a nice day?</label>
+                </div>
+                <div>
+                    <input class="day" type="radio" id="badDay" name="day">
+                    <label for="niceDay">Not so much</label>
+                </div>
                 <button id="messenger" onclick="messenger1()">Click Me!!</button>
             </div>
         </div>

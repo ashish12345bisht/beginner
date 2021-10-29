@@ -20,14 +20,16 @@
             background-size: cover;
         }
         .car, .enemyCar{
-            width: 50px;
+            width: 40px;
             height: 70px;
             position: absolute;
             bottom: 100px;
             border-radius: 5px;
+            background-size: contain;
             background-image: url(https://ik.imagekit.io/cooldunlin185005/tarzan_car-removebg-preview_GschVD_GS1J.png?updatedAt=1632833370840);
             
         }
+        
         .gameArea{
             width: 400px;
             height: 100vh;
@@ -207,12 +209,10 @@
             enemyCar.setAttribute('class','enemyCar');
             enemyCar.y=((j+1)*350)*-1;
             enemyCar.style.top=enemyCar.y+"px";
-            enemyCar.style.background='black';
+            enemyCar.style.backgroundImage='url("pcar-removebg-preview.png")';
             enemyCar.style.left=Math.floor(Math.random()*350)+"px";
             gameArea.appendChild(enemyCar);
-            
         }
-        
     }
     
 
